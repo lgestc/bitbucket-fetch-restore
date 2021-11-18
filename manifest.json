@@ -1,0 +1,20 @@
+{
+  "name": "Bitbucket Fetch Restore",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension restores git fetch to checkout command",
+  "homepage_url": "https://github.com/lgmys",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": ["contentSettings"],
+  "content_scripts": [
+    {
+      "matches": ["https://bitbucket.org/*"],
+      "js": ["src/inject/inject.js"]
+    }
+  ]
+}
